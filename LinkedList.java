@@ -44,10 +44,24 @@ System.out.println("Linked List After Deleting at tail");
 list.displayList();
 sc.close();
     }
-public void deleteEnd()
-    {
-        // TYPE YOUR CODE HERE
-    }
+    public void deleteEnd()
+{
+if(head==null)
+System.out.println("List is empty");
+else
+{
+Node temp=head;
+Node prev=head;
+while(temp.next.next!=null)
+{
+prev=prev.next;
+temp=temp.next;
+}
+temp=temp.next;
+prev.next=null;
+System.out.println("Deleted Element is:"+temp.data);
+}
+}
 public void displayList() {
         Node current = head;
         while (current != null) {
